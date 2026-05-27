@@ -1,0 +1,39 @@
+@use '../utils/variables' as *;
+@use '../utils/mixins';
+
+.footer {
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top right;   
+  height: 200px; 
+  background-image: url(../images/footer/footer-ride-mobile.png); 
+  background-image: image-set(
+    url(../images/footer/footer-ride-mobile.webp) 1x,
+    url(../images/footer/footer-ride-mobile-@2x.webp) 2x,
+    url(../images/footer/footer-ride-mobile.png) 1x,
+    url(../images/footer/footer-ride-mobile-@2x.png) 2x
+  );
+
+  @include mixins.on-tablet {
+    height: 480px;
+    background-image: url(../images/footer/footer-ride-tablet.png);
+    background-image: image-set(
+      url(../images/footer/footer-ride-tablet.webp) 1x,
+      url(../images/footer/footer-ride-tablet-@2x.webp) 2x,
+      url(../images/footer/footer-ride-tablet.png) 1x,
+      url(../images/footer/footer-ride-tablet-@2x.png) 2x
+    );
+  }
+
+  @include mixins.on-desktop {
+    height: 555px;
+    background-image: url(../images/footer/footer-ride-desktop.png);
+    background-image: image-set(
+      url(../images/footer/footer-ride-desktop.webp) 1x,
+      url(../images/footer/footer-ride-desktop-@2x.webp) 2x,
+      url(../images/footer/footer-ride-desktop.png) 1x,
+      url(../images/footer/footer-ride-desktop-@2x.png) 2x
+    );
+  }
+}
