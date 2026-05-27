@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="The official website of My Bike">
+    <meta name="description" content="The official website of My Bike" />
     <title>My Bike</title>
     <link
       rel="apple-touch-icon"
@@ -27,7 +27,7 @@
     <link rel="stylesheet" href="/src/styles/main.scss" />
     <script src="/src/scripts/main.js" defer></script>
   </head>
-  <body>
+  <body class="page_body">
     <header class="header">
       <div class="container">
         <div class="header__content">
@@ -101,5 +101,136 @@
         </div>
       </div>
     </aside>
+
+    <main class="main">
+      <div class="container">
+        <div class="main__content">
+          <section class="promo">
+            <h2 class="promo__title section-title">Move Free</h2>
+            <p class="promo__subtitle">
+              Shift your ride, not gears. Find the fastest way to move in the
+              city as the bike adapts intuitively to power the speed you need.
+            </p>
+          </section>
+
+          <section class="compare" id="compare">
+            <h2 class="section-title">Compare Bikes</h2>
+            <div class="compare__products">
+              <article class="product compare__product">
+                <a href="#" class="product__link">
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/compare/compare-cowboy-1-desktop.webp     1x,
+                        ./images/compare/compare-cowboy-1-desktop-@2x.webp 2x
+                      "
+                      media="(min-width: 1260px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/compare/compare-cowboy-1-tablet.webp     1x,
+                        ./images/compare/compare-cowboy-1-tablet-@2x.webp 2x
+                      "
+                      media="(min-width: 744px)"
+                      type="image/webp"
+                    />
+                    <img
+                      loading="lazy"
+                      class="product__photo"
+                      src="./images/compare/compare-cowboy-1-mobile.png"
+                      srcset="
+                        ./images/compare/compare-cowboy-1-mobile-@2x.png 2x
+                      "
+                      alt="Sporty 4"
+                    />
+                  </picture>
+                </a>
+                <h3 class="product__title">Sporty 4</h3>
+                <p class="product__description">
+                  The iconic frame brought to a new performance height as a
+                  sporty, active ride.
+                </p>
+                <p class="product__price">$ 2 590</p>
+              </article>
+              <article class="product compare__product">
+                <a href="#" class="product__link">
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/compare/compare-cowboy-2-desktop.webp     1x,
+                        ./images/compare/compare-cowboy-2-desktop-@2x.webp 2x
+                      "
+                      media="(min-width: 1260px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/compare/compare-cowboy-2-tablet.webp     1x,
+                        ./images/compare/compare-cowboy-2-tablet-@2x.webp 2x
+                      "
+                      media="(min-width: 744px)"
+                      type="image/webp"
+                    />
+                    <img
+                      loading="lazy"
+                      class="product__photo"
+                      src="./images/compare/compare-cowboy-2-mobile.png"
+                      srcset="
+                        ./images/compare/compare-cowboy-2-mobile-@2x.png 2x
+                      "
+                      alt="Ride in town ST"
+                    />
+                  </picture>
+                </a>
+                <h3 class="product__title">Ride in town ST</h3>
+                <p class="product__description">
+                  An open frame for an upright riding position as the most
+                  comfortable ride in town.
+                </p>
+                <p class="product__price">$ 2 590</p>
+              </article>
+              <article class="product compare__product">
+                <a href="#" class="product__link">
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/compare/compare-cowboy-3-desktop.webp     1x,
+                        ./images/compare/compare-cowboy-3-desktop-@2x.webp 2x
+                      "
+                      media="(min-width: 1260px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/compare/compare-cowboy-3-tablet.webp     1x,
+                        ./images/compare/compare-cowboy-3-tablet-@2x.webp 2x
+                      "
+                      media="(min-width: 744px)"
+                      type="image/webp"
+                    />
+                    <img
+                      loading="lazy"
+                      src="./images/compare/compare-cowboy-3-mobile.png"
+                      srcset="
+                        ./images/compare/compare-cowboy-3-mobile-@2x.png 2x
+                      "
+                      alt="Agile ride 3"
+                      class="product__photo"
+                    />
+                  </picture>
+                </a>
+                <h3 class="product__title">Agile ride 3</h3>
+                <p class="product__description">
+                  The lightweight frame that has earned its street tread as a
+                  sleek, agile ride.
+                </p>
+                <p class="product__price">$ 2 090</p>
+              </article>
+            </div>
+          </section>
+        </div>
+      </div>
+    </main>
   </body>
 </html>

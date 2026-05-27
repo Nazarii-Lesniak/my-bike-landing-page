@@ -1,0 +1,17 @@
+@use "../utils/variables" as *;
+@use "../utils/mixins";
+
+.main {
+  background-color: $color-page-background;
+
+  &__content {
+    display: grid;
+    row-gap: 96px;
+    padding-top: 60px;
+
+    @include mixins.on-tablet {
+      padding-top: 120px;
+      row-gap: 120px;
+    }
+  }
+}
