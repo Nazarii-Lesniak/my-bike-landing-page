@@ -17,5 +17,7 @@
     width: 100%;
     max-width: 324px;
     justify-self: center;
+
+    @include mixins.button-base;
   }
 }

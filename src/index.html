@@ -254,7 +254,7 @@
             </div>
           </section>
 
-          <section class="details fade-in" id="details">
+          <section class="details" id="details">
             <h2 class="section-title">The details</h2>
 
             <div class="details__wrapper">
@@ -264,7 +264,7 @@
                     <picture>
                       <source
                         srcset="
-                          ./images/details/details-unlock-1-desktop.webp    1x,
+                          ./images/details/details-unlock-1-desktop.webp     1x,
                           ./images/details/details-unlock-1-desktop-@2x.webp 2x
                         "
                         media="(min-width: 1260px)"
@@ -330,7 +330,7 @@
                         class="detail__photo"
                         src="./images/details/details-unlock-2-mobile.png"
                         srcset="
-                          ./images/details/details-unlock-2-mobile-@2x.png  2x
+                          ./images/details/details-unlock-2-mobile-@2x.png 2x
                         "
                         alt="Auto Unlock Bike"
                       />
@@ -523,6 +523,74 @@
                 </p>
               </article>
               <button type="button" class="details__button">Explore</button>
+            </div>
+          </section>
+
+          <section class="contacts" id="contacts">
+            <h2 class="contacts__title section-title">Contact us</h2>
+
+            <div class="contacts__field">
+              <form
+                id="form"
+                action="#"
+                method="POST"
+                class="contacts__form"
+              >
+                <input
+                  aria-label="Your name"
+                  type="text"
+                  name="name"
+                  placeholder="Name"
+                  class="contacts__input--name"
+                  minlength="3"
+                  maxlength="30"
+                  required
+                />
+                <input
+                  aria-label="Your email"
+                  type="email"
+                  name="email"
+                  placeholder="Email"
+                  class="contacts__input--email"
+                  minlength="10"
+                  maxlength="255"
+                  pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}$"
+                  required
+                />
+                <textarea
+                  aria-label="Your message"
+                  name="message"
+                  placeholder="Message"
+                  class="contacts__textarea"
+                  minlength="5"
+                  maxlength="500"
+                  required
+                ></textarea>
+                <button type="submit" class="contacts__button">Send</button>
+              </form>
+
+              <div class="contacts__info">
+                <h3 class="contacts__type-of-info">Phone</h3>
+                <a href="tel:+123455555555" class="contacts__text-info">
+                  +1 234 5555-55-55
+                </a>
+                <h3 class="contacts__type-of-info">Email</h3>
+                <a href="mailto:hello@miami.com" class="contacts__text-info">
+                  hello@miami.com
+                </a>
+                <h3 class="contacts__type-of-info">Address</h3>
+                <a
+                  href="https://maps.app.goo.gl/zA7FafvkMGyXFBFe9"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="contacts__text-info"
+                  >400 first ave.
+                  <br />
+                  suite 700
+                  <br />
+                  Minneapolis, MN 55401
+                </a>
+              </div>
             </div>
           </section>
         </div>

@@ -1,4 +1,4 @@
-@use './variables' as *;
+@use "./variables" as *;
 
 @mixin on-tablet() {
   @media (min-width: $breakpoint-tablet) {
@@ -31,7 +31,7 @@
   transition: #{$property} $effect-time;
 
   &:hover {
-    #{$property}: $toValue
+    #{$property}: $toValue;
   }
 }
 
@@ -59,4 +59,71 @@
   left: 0;
   width: 100%;
   height: 100%;
+}
+
+@mixin form-input {
+  box-sizing: border-box;
+  padding: 16px;
+  background-color: $color-input;
+  border-radius: 40px;
+
+  transition:
+    transform $effect-time,
+    border-color $effect-time,
+    background-color $effect-time;
+
+  &:hover {
+    transform: scale(0.97);
+    border-color: #d5d7de;
+  }
+
+  &:focus {
+    outline: none;
+    border-color: #292929;
+  }
+
+  &:active {
+    border-color: #292929;
+    transform: scale(0.95);
+  }
+
+  &::placeholder {
+    color: $color-placeholder;
+  }
+
+  &:hover::placeholder {
+    transform: scale(0.99);
+  }
+}
+
+@mixin button-base() {
+  @include hover(transform, scale(0.97));
+
+  height: 48px;
+  background-color: $color-button-background;
+  border-radius: 40px;
+  cursor: pointer;
+
+  color: $color-button-text;
+  font-weight: 700;
+  border: 2px solid transparent;
+
+  transition:
+    color $effect-time,
+    background-color $effect-time,
+    border-color $effect-time,
+    transform $effect-time;
+
+  &:hover {
+    color: $color-button-text;
+    background-color: $color-button-background;
+    border-color: $color-button-background;
+  }
+
+  &:active {
+    color: $color-button-text;
+    background-color: $color-button-background;
+
+    @include hover(transform, scale(0.95));
+  }
 }
