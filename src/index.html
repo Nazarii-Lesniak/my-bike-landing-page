@@ -24,7 +24,7 @@
       type="font/woff2"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="/src/styles/main.scss" />
+    <link rel="stylesheet" href="/src/styles/index.scss" />
     <script src="/src/scripts/main.js" defer></script>
   </head>
   <body class="page_body">
@@ -82,7 +82,7 @@
                 <a class="nav__link" href="#about-us">About us</a>
               </li>
               <li class="nav__item">
-                <a class="nav__link" href="#compare-bikes">Compare Bikes</a>
+                <a class="nav__link" href="#compare">Compare Bikes</a>
               </li>
               <li class="nav__item">
                 <a class="nav__link" href="#details">Details</a>
@@ -105,7 +105,7 @@
     <main class="main">
       <div class="container">
         <div class="main__content">
-          <section class="promo">
+          <section class="promo" id="about-us">
             <h2 class="promo__title section-title">Move Free</h2>
             <p class="promo__subtitle">
               Shift your ride, not gears. Find the fastest way to move in the
@@ -133,6 +133,14 @@
                         ./images/compare/compare-cowboy-1-tablet-@2x.webp 2x
                       "
                       media="(min-width: 744px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/compare/compare-cowboy-1-mobile.webp     1x,
+                        ./images/compare/compare-cowboy-1-mobile-@2x.webp 2x
+                      "
+                      media="(min-width: 320px)"
                       type="image/webp"
                     />
                     <img
@@ -172,6 +180,14 @@
                       media="(min-width: 744px)"
                       type="image/webp"
                     />
+                    <source
+                      srcset="
+                        ./images/compare/compare-cowboy-2-mobile.webp     1x,
+                        ./images/compare/compare-cowboy-2-mobile-@2x.webp 2x
+                      "
+                      media="(min-width: 320px)"
+                      type="image/webp"
+                    />
                     <img
                       loading="lazy"
                       class="product__photo"
@@ -209,6 +225,14 @@
                       media="(min-width: 744px)"
                       type="image/webp"
                     />
+                    <source
+                      srcset="
+                        ./images/compare/compare-cowboy-3-mobile.webp     1x,
+                        ./images/compare/compare-cowboy-3-mobile-@2x.webp 2x
+                      "
+                      media="(min-width: 320px)"
+                      type="image/webp"
+                    />
                     <img
                       loading="lazy"
                       src="./images/compare/compare-cowboy-3-mobile.png"
@@ -227,6 +251,278 @@
                 </p>
                 <p class="product__price">$ 2 090</p>
               </article>
+            </div>
+          </section>
+
+          <section class="details fade-in" id="details">
+            <h2 class="section-title">The details</h2>
+
+            <div class="details__wrapper">
+              <article class="detail">
+                <div class="detail__photos">
+                  <a href="#" class="detail__link detail__link--wide">
+                    <picture>
+                      <source
+                        srcset="
+                          ./images/details/details-unlock-1-desktop.webp    1x,
+                          ./images/details/details-unlock-1-desktop-@2x.webp 2x
+                        "
+                        media="(min-width: 1260px)"
+                        type="image/webp"
+                      />
+                      <source
+                        srcset="
+                          ./images/details/details-unlock-1-tablet.webp     1x,
+                          ./images/details/details-unlock-1-tablet-@2x.webp 2x
+                        "
+                        media="(min-width: 744px)"
+                        type="image/webp"
+                      />
+                      <source
+                        srcset="
+                          ./images/details/details-unlock-1-mobile.webp     1x,
+                          ./images/details/details-unlock-1-mobile-@2x.webp 2x
+                        "
+                        media="(min-width: 320px)"
+                        type="image/webp"
+                      />
+                      <img
+                        loading="lazy"
+                        class="detail__photo"
+                        src="./images/details/details-unlock-1-mobile.png"
+                        srcset="
+                          ./images/details/details-unlock-1-mobile-@2x.png 2x
+                        "
+                        alt="Auto Unlock App"
+                      />
+                    </picture>
+                  </a>
+
+                  <a href="#" class="detail__link detail__link--square">
+                    <picture>
+                      <source
+                        srcset="
+                          ./images/details/details-unlock-2-desktop.webp     1x,
+                          ./images/details/details-unlock-2-desktop-@2x.webp 2x
+                        "
+                        media="(min-width: 1260px)"
+                        type="image/webp"
+                      />
+                      <source
+                        srcset="
+                          ./images/details/details-unlock-2-tablet.webp     1x,
+                          ./images/details/details-unlock-2-tablet-@2x.webp 2x
+                        "
+                        media="(min-width: 744px)"
+                        type="image/webp"
+                      />
+                      <source
+                        srcset="
+                          ./images/details/details-unlock-2-mobile.webp     1x,
+                          ./images/details/details-unlock-2-mobile-@2x.webp 2x
+                        "
+                        media="(min-width: 320px)"
+                        type="image/webp"
+                      />
+
+                      <img
+                        loading="lazy"
+                        class="detail__photo"
+                        src="./images/details/details-unlock-2-mobile.png"
+                        srcset="
+                          ./images/details/details-unlock-2-mobile-@2x.png  2x
+                        "
+                        alt="Auto Unlock Bike"
+                      />
+                    </picture>
+                  </a>
+                </div>
+
+                <h3 class="detail__title">Auto Unlock</h3>
+                <p class="detail__description">
+                  The app senses when you're nearby to unlock automatically. GPS
+                  tracking so you know where your bike is and can track it
+                  anytime.
+                </p>
+              </article>
+
+              <article class="detail">
+                <div class="detail__photos">
+                  <a href="#" class="detail__link detail__link--wide">
+                    <picture>
+                      <source
+                        srcset="
+                          ./images/details/details-battery-1-desktop.webp     1x,
+                          ./images/details/details-battery-1-desktop-@2x.webp 2x
+                        "
+                        media="(min-width: 1260px)"
+                        type="image/webp"
+                      />
+                      <source
+                        srcset="
+                          ./images/details/details-battery-1-tablet.webp     1x,
+                          ./images/details/details-battery-1-tablet-@2x.webp 2x
+                        "
+                        media="(min-width: 744px)"
+                        type="image/webp"
+                      />
+                      <source
+                        srcset="
+                          ./images/details/details-battery-1-mobile.webp     1x,
+                          ./images/details/details-battery-1-mobile-@2x.webp 2x
+                        "
+                        media="(min-width: 320px)"
+                        type="image/webp"
+                      />
+
+                      <img
+                        loading="lazy"
+                        class="detail__photo"
+                        src="./images/details/details-battery-1-mobile.png"
+                        srcset="
+                          ./images/details/details-battery-1-mobile-@2x.png 2x
+                        "
+                        alt="Bike Back"
+                      />
+                    </picture>
+                  </a>
+
+                  <a href="#" class="detail__link detail__link--square">
+                    <picture>
+                      <source
+                        srcset="
+                          ./images/details/details-battery-2-desktop.webp     1x,
+                          ./images/details/details-battery-2-desktop-@2x.webp 2x
+                        "
+                        media="(min-width: 1260px)"
+                        type="image/webp"
+                      />
+                      <source
+                        srcset="
+                          ./images/details/details-battery-2-tablet.webp     1x,
+                          ./images/details/details-battery-2-tablet-@2x.webp 2x
+                        "
+                        media="(min-width: 744px)"
+                        type="image/webp"
+                      />
+                      <source
+                        srcset="
+                          ./images/details/details-battery-2-mobile.webp     1x,
+                          ./images/details/details-battery-2-mobile-@2x.webp 2x
+                        "
+                        media="(min-width: 320px)"
+                        type="image/webp"
+                      />
+                      <img
+                        loading="lazy"
+                        class="detail__photo"
+                        src="./images/details/details-battery-2-mobile.png"
+                        srcset="
+                          ./images/details/details-battery-2-mobile-@2x.png 2x
+                        "
+                        alt="Bike Front"
+                      />
+                    </picture>
+                  </a>
+                </div>
+
+                <h3 class="detail__title">Range & Integrated lights</h3>
+                <p class="detail__description">
+                  The removable battery has up to 70km battery autonomy and
+                  weighs only 2.4 kg. Lights integrated into the frame give you
+                  always-on visibility day and night.
+                </p>
+              </article>
+
+              <article class="detail">
+                <div class="detail__photos">
+                  <a href="#" class="detail__link detail__link--square">
+                    <picture>
+                      <source
+                        srcset="
+                          ./images/details/details-brakes-1-desktop.webp     1x,
+                          ./images/details/details-brakes-1-desktop-@2x.webp 2x
+                        "
+                        media="(min-width: 1260px)"
+                        type="image/webp"
+                      />
+                      <source
+                        srcset="
+                          ./images/details/details-brakes-1-tablet.webp     1x,
+                          ./images/details/details-brakes-1-tablet-@2x.webp 2x
+                        "
+                        media="(min-width: 744px)"
+                        type="image/webp"
+                      />
+                      <source
+                        srcset="
+                          ./images/details/details-brakes-1-mobile.webp     1x,
+                          ./images/details/details-brakes-1-mobile-@2x.webp 2x
+                        "
+                        media="(min-width: 320px)"
+                        type="image/webp"
+                      />
+                      <img
+                        loading="lazy"
+                        class="detail__photo"
+                        src="./images/details/details-brakes-1-mobile.png"
+                        srcset="
+                          ./images/details/details-brakes-1-mobile-@2x.png 2x
+                        "
+                        alt="Brake"
+                      />
+                    </picture>
+                  </a>
+
+                  <a href="#" class="detail__link detail__link--wide">
+                    <picture>
+                      <source
+                        srcset="
+                          ./images/details/details-brakes-2-desktop.webp     1x,
+                          ./images/details/details-brakes-2-desktop-@2x.webp 2x
+                        "
+                        media="(min-width: 1260px)"
+                        type="image/webp"
+                      />
+                      <source
+                        srcset="
+                          ./images/details/details-brakes-2-tablet.webp     1x,
+                          ./images/details/details-brakes-2-tablet-@2x.webp 2x
+                        "
+                        media="(min-width: 744px)"
+                        type="image/webp"
+                      />
+                      <source
+                        srcset="
+                          ./images/details/details-brakes-2-mobile.webp     1x,
+                          ./images/details/details-brakes-2-mobile-@2x.webp 2x
+                        "
+                        media="(min-width: 320px)"
+                        type="image/webp"
+                      />
+                      <img
+                        loading="lazy"
+                        class="detail__photo"
+                        src="./images/details/details-brakes-2-mobile.png"
+                        srcset="
+                          ./images/details/details-brakes-2-mobile-@2x.png 2x
+                        "
+                        alt="Kickstand"
+                      />
+                    </picture>
+                  </a>
+                </div>
+                <h3 class="detail__title">
+                  Hydraulic disc brakes & Lightweight
+                </h3>
+                <p class="detail__description">
+                  Brakes with total stopping power the second you make contact.
+                  The removable battery has up to 70km battery autonomy and
+                  weighs only 2.4 kg. Lights integrated into the frame give you
+                  always-on visibility day and night.
+                </p>
+              </article>
+              <button type="button" class="details__button">Explore</button>
             </div>
           </section>
         </div>

@@ -1,0 +1,71 @@
+@use "../utils/variables" as *;
+@use "../utils/mixins";
+
+.detail {
+  &__photos {
+    @include mixins.page-grid;
+
+    margin-bottom: 16px;
+  }
+
+  &__link {
+    position: relative;
+
+    &--wide {
+      @include mixins.on-tablet {
+        grid-column: span 4;
+      }
+
+      @include mixins.on-desktop {
+        grid-column: span 8;
+      }
+    }
+
+    &--square {
+      height: 0;
+      padding-bottom: 100%;
+
+      @include mixins.on-tablet {
+        grid-column: span 2;
+      }
+
+      @include mixins.on-desktop {
+        grid-column: span 4;
+      }
+    }
+  }
+
+  &__photo {
+    @include mixins.absolute-cover;
+
+    object-fit: cover;
+
+    transition: transform $effect-time;
+
+    @include mixins.hover(transform, scale(1.05));
+
+    &:active {
+      @include mixins.hover(transform, scale(0.95));
+    }
+  }
+
+  &__title {
+    margin-bottom: 8px;
+
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 140%;
+    color: $color-text-main;
+
+    @include mixins.on-tablet {
+      margin-bottom: 16px;
+    }
+  }
+
+  &__description {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 140%;
+    color: $color-text-main;
+  }
+}
