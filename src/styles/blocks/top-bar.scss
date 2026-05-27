@@ -1,0 +1,37 @@
+@use "../utils/variables" as *;
+@use "../utils/mixins";
+
+.top-bar {
+  padding-block: 24px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @include mixins.on-tablet {
+    padding-block: 36px;
+  }
+
+  &__icons {
+    display: flex;
+    gap: 24px;
+
+    @include mixins.on-tablet {
+      gap: 32px;
+    }
+  }
+
+  &__logo-link {
+    display: flex;
+  }
+
+  &__logo {
+    height: 38px;
+
+    @include mixins.hover(transform, scale(1.2));
+
+    @include mixins.on-tablet {
+      height: 56px;
+    }
+  }
+}
