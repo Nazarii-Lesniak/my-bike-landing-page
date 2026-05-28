@@ -14,6 +14,8 @@ $color-page-background: $color-dark;
 /* Input */
 $color-input: #f8f8fa;
 $color-placeholder: #7e7e83;
+$color-input-border-hover: #d5d7de;
+$color-input-border-focus: #292929;
 
 /* Button */
 $color-button-text: $color-dark;
@@ -25,3 +27,9 @@ $color-background-navigation: #c2c2c2;
 
 /* Effects */
 $effect-time: 0.3s;
+
+/* Fonts weights */
+$font-weight-regular: 400;
+$font-weight-medium: 500;
+$font-weight-semibold: 600;
+$font-weight-bold: 700;

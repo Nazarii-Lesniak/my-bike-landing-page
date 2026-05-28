@@ -31,6 +31,14 @@
     text-align: center;
 
     @include typography.title;
+
+    transition: text-shadow $effect-time ease;
+
+    &:hover {
+      text-shadow:
+        0 0 10px rgba(0, 0, 0, 1),
+        0 0 10px rgba(0, 0, 0, 1);
+    }
   }
 
   &__bottom {

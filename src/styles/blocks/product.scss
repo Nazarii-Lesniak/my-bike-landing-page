@@ -6,6 +6,8 @@
   &__photo {
     width: 100%;
 
+    transition: transform $effect-time ease;
+
     @include mixins.hover(transform, scale(1.05));
 
     &:active {

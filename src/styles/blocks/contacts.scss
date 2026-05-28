@@ -54,6 +54,7 @@
   }
 
   &__button {
+    @include typography.button;
     @include mixins.button-base;
   }
 
@@ -69,12 +70,12 @@
 
     padding-bottom: 24px;
 
+    transition: opacity $effect-time;
+
     @include typography.contact-text-info;
 
-    transition: color $effect-time;
-
     &:hover {
-      @include mixins.hover(opacity, 0.7);
+      @include mixins.hover(opacity, 0.5);
     }
   }
 }

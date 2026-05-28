@@ -28,8 +28,6 @@
 }
 
 @mixin hover($property, $toValue) {
-  transition: #{$property} $effect-time;
-
   &:hover {
     #{$property}: $toValue;
   }
@@ -66,6 +64,7 @@
   padding: 16px;
   background-color: $color-input;
   border-radius: 40px;
+  border: 1px solid transparent;
 
   transition:
     transform $effect-time,
@@ -74,17 +73,17 @@
 
   &:hover {
     transform: scale(0.97);
-    border-color: #d5d7de;
+    border-color: $color-input-border-hover;
   }
 
   &:focus {
     outline: none;
-    border-color: #292929;
+    border-color: $color-input-border-focus;
   }
 
   &:active {
-    border-color: #292929;
     transform: scale(0.95);
+    border-color: $color-input-border-focus;
   }
 
   &::placeholder {
@@ -105,8 +104,7 @@
   cursor: pointer;
 
   color: $color-button-text;
-  font-weight: 700;
-  border: 2px solid transparent;
+  border: 1px solid transparent;
 
   transition:
     color $effect-time,

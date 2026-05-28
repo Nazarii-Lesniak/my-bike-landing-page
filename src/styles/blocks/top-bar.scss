@@ -28,6 +28,8 @@
   &__logo {
     height: 38px;
 
+    transition: transform $effect-time ease;
+
     @include mixins.hover(transform, scale(1.2));
 
     @include mixins.on-tablet {

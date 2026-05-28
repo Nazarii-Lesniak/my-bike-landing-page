@@ -2,7 +2,7 @@
 @use "./mixins";
 
 @mixin title {
-  font-weight: 700;
+  font-weight: $font-weight-bold;
   font-size: 36px;
   line-height: 100%;
   letter-spacing: -1.5px;
@@ -17,70 +17,113 @@
   }
 }
 
+@mixin section-title {
+  font-size: 32px;
+  font-weight: $font-weight-medium;
+  line-height: 140%;
+  color: $color-text-main;
+
+  @include mixins.on-tablet {
+    font-size: 48px;
+  }
+
+  @include mixins.on-desktop {
+    font-size: 64px;
+  }
+}
+
+
+
 @mixin phone-number {
   font-size: 12px;
-  font-weight: 700;
+  font-weight: $font-weight-bold;
   line-height: 16px;
   letter-spacing: 2px;
   color: $color-text-main;
 }
 
-@mixin navigation-link {
-  font-size: 22px;
-  font-weight: 600;
-  line-height: 22px;
-  letter-spacing: 2px;
+@mixin menu-phone-number {
+  font-size: 16px;
+  font-weight: $font-weight-semibold;
+  line-height: 27px;
+  color: $color-text-navigation;
 
   @include mixins.on-desktop {
-    font-weight: 700;
+    font-weight: $font-weight-bold;
+  }
+}
+
+@mixin menu-call-to-order {
+  font-size: 12px;
+  font-weight: $font-weight-semibold;
+  line-height: 16px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: $color-text-navigation;
+
+  @include mixins.on-desktop {
+    font-weight: $font-weight-bold;
+  }
+}
+
+@mixin menu-navigation-link {
+  font-size: 22px;
+  font-weight: $font-weight-semibold;
+  line-height: 22px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: $color-text-navigation;
+
+  @include mixins.on-desktop {
+    font-weight: $font-weight-bold;
   }
 }
 
 @mixin product-info {
   font-size: 24px;
-  font-weight: 700;
+  font-weight: $font-weight-bold;
   line-height: 140%;
-  color: $color-text-main;
 }
 
 @mixin product-description {
   font-size: 16px;
-  font-weight: 400;
+  font-weight: $font-weight-regular;
   line-height: 140%;
-  color: $color-text-main;
 }
 
 @mixin promo-subtitle {
   font-size: 23px;
-  font-weight: 500;
+  font-weight: $font-weight-medium;
   line-height: 140%;
-  color: $color-text-main;
 }
 
 @mixin contact-type-info {
   font-size: 14px;
-  font-weight: 400;
+  font-weight: $font-weight-regular;
   line-height: 140%;
-  color: $color-text-main;
 }
 
 @mixin contact-text-info {
   font-size: 16px;
-  font-weight: 500;
+  font-weight: $font-weight-medium;
   line-height: 140%;
-  color: $color-text-main;
 }
 
 @mixin detail-title {
   font-size: 24px;
-  font-weight: 700;
+  font-weight: $font-weight-bold;
   line-height: 140%;
-  color: $color-text-main;
 }
 
 @mixin detail-description {
   font-size: 16px;
-  font-weight: 400;
+  font-weight: $font-weight-regular;
   line-height: 140%;
-  color: $color-text-main;
 }
+
+@mixin button {
+  font-size: 16px;
+  font-weight: $font-weight-bold;
+  line-height: 27px;
+}
+

@@ -1,5 +1,6 @@
 @use "../utils/variables" as *;
 @use "../utils/mixins";
+@use "../utils/typography";
 
 .details {
   &__wrapper {
@@ -18,6 +19,7 @@
     max-width: 324px;
     justify-self: center;
 
+    @include typography.button;
     @include mixins.button-base;
   }
 }

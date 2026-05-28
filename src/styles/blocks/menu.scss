@@ -1,11 +1,11 @@
-@use '../utils/variables' as *;
-@use '../utils/mixins';
+@use "../utils/variables" as *;
+@use "../utils/mixins";
+@use "../utils/typography";
 
 .menu {
   box-sizing: border-box;
   height: 100vh;
   background-color: $color-background-navigation;
-  font-weight: 700;
   overflow: auto;
 
   &__top {
@@ -28,9 +28,12 @@
     display: block;
     width: fit-content;
     margin-bottom: 16px;
-    line-height: 27px;
 
-    @include mixins.hover(opacity, 0.7);
+    @include typography.menu-phone-number;
+
+    transition: opacity $effect-time ease;
+
+    @include mixins.hover(opacity, 0.5);
   }
 
   &__call-to-order {
@@ -38,9 +41,11 @@
     width: fit-content;
     padding-bottom: 8px;
     border-bottom: 1px solid $color-text-navigation;
-    line-height: 16px;
-    letter-spacing: 2px;
 
-    @include mixins.hover(opacity, 0.7);
+    @include typography.menu-call-to-order;
+
+    transition: opacity $effect-time ease;
+
+    @include mixins.hover(opacity, 0.5);
   }
 }

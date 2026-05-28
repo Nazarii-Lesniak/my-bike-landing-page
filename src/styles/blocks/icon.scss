@@ -10,7 +10,9 @@
   cursor: pointer;
   position: relative;
 
-  @include mixins.hover(transform, scale(1.2));
+  transition: transform $effect-time ease;
+
+  @include mixins.hover(transform, scale(1.3));
 
   @include mixins.on-tablet {
     height: 32px;
