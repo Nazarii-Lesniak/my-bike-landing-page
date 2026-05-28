@@ -1,0 +1,25 @@
+@use "../utils/variables" as *;
+@use "../utils/mixins";
+@use "../utils/typography";
+
+.details {
+  &__wrapper {
+    display: grid;
+
+    row-gap: 40px;
+
+    @include mixins.on-tablet {
+      row-gap: 48px;
+    }
+  }
+
+  &__button {
+    grid-column: 1 / -1;
+    width: 100%;
+    max-width: 324px;
+    justify-self: center;
+
+    @include typography.button;
+    @include mixins.button-base;
+  }
+}

@@ -1,0 +1,28 @@
+@use "../utils/variables" as *;
+@use "../utils/mixins";
+
+.compare {
+  &__products {
+    @include mixins.page-grid;
+
+    gap: 40px;
+
+    @include mixins.on-tablet {
+      column-gap: 48px;
+    }
+  }
+
+  &__product {
+    grid-column: 1 / -1;
+
+    @include mixins.on-tablet {
+      grid-column: 1 / -1;
+    }
+
+    @include mixins.on-desktop {
+      grid-column: span 4;
+    }
+
+    transition: transform $effect-time;
+  }
+}

@@ -1,0 +1,51 @@
+@use "../utils/variables" as *;
+@use "../utils/mixins";
+@use "../utils/typography";
+
+.menu {
+  box-sizing: border-box;
+  height: 100vh;
+  background-color: $color-background-navigation;
+  overflow: auto;
+
+  &__top {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+
+    margin-bottom: 8px;
+
+    @include mixins.on-desktop {
+      margin-bottom: 24px;
+    }
+  }
+
+  &__nav {
+    margin-bottom: 40px;
+  }
+
+  &__phone-number {
+    display: block;
+    width: fit-content;
+    margin-bottom: 16px;
+
+    @include typography.menu-phone-number;
+
+    transition: opacity $effect-time ease;
+
+    @include mixins.hover(opacity, 0.5);
+  }
+
+  &__call-to-order {
+    display: block;
+    width: fit-content;
+    padding-bottom: 8px;
+    border-bottom: 1px solid $color-text-navigation;
+
+    @include typography.menu-call-to-order;
+
+    transition: opacity $effect-time ease;
+
+    @include mixins.hover(opacity, 0.5);
+  }
+}

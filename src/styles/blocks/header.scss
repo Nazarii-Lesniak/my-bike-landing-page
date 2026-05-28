@@ -1,0 +1,55 @@
+@use "../utils/variables" as *;
+@use "../utils/mixins";
+@use "../utils/typography";
+
+.header {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center right;
+
+  @include mixins.bg-retina("header/header-bike-mobile");
+
+  @include mixins.on-tablet {
+    @include mixins.bg-retina("header/header-bike-tablet");
+  }
+
+  @include mixins.on-desktop {
+    background-position: top;
+
+    @include mixins.bg-retina("header/header-bike-desktop");
+  }
+
+  &__content {
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  &__title {
+    text-align: center;
+
+    @include typography.title;
+
+    transition: text-shadow $effect-time ease;
+
+    &:hover {
+      text-shadow:
+        0 0 10px rgba(0, 0, 0, 1),
+        0 0 10px rgba(0, 0, 0, 1);
+    }
+  }
+
+  &__bottom {
+    padding-bottom: 88px;
+
+    @include mixins.on-tablet {
+      padding-bottom: 130px;
+    }
+
+    @include mixins.on-desktop {
+      padding-bottom: 203px;
+    }
+  }
+}

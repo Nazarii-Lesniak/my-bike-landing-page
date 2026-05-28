@@ -1,0 +1,55 @@
+@use "../utils/variables" as *;
+@use "../utils/mixins";
+
+.main {
+  background-color: $color-page-background;
+
+  &__content {
+    display: grid;
+    padding-top: 60px;
+    padding-bottom: 120px;
+
+    @include mixins.on-tablet {
+      padding-top: 120px;
+      padding-bottom: 102px;
+    }
+
+    @include mixins.on-desktop {
+      padding-bottom: 164px;
+    }
+
+    & > :nth-child(1) {
+      margin-bottom: 92px;
+    }
+    & > :nth-child(2) {
+      margin-bottom: 92px;
+    }
+    & > :nth-child(3) {
+      margin-bottom: 80px;
+    }
+
+    @include mixins.on-tablet {
+      & > :nth-child(1) {
+        margin-bottom: 132px;
+      }
+      & > :nth-child(2) {
+        margin-bottom: 120px;
+      }
+      & > :nth-child(3) {
+        margin-bottom: 120px;
+      }
+    }
+
+    @include mixins.on-desktop {
+      & > :nth-child(1) {
+        margin-bottom: 164px;
+      }
+      & > :nth-child(2) {
+        margin-bottom: 144px;
+      }
+      & > :nth-child(3) {
+        margin-bottom: 180px;
+      }
+    }
+  }
+}

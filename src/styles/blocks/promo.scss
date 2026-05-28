@@ -1,0 +1,35 @@
+@use "../utils/variables" as *;
+@use "../utils/mixins";
+@use "../utils/typography";
+
+.promo {
+  @include mixins.page-grid;
+
+  &__title {
+    grid-column: 1 / -1;
+    line-height: 100%;
+    text-align: left;
+
+    @include mixins.on-tablet {
+      grid-column: span 3;
+    }
+
+    @include mixins.on-desktop {
+      grid-column: span 5;
+    }
+  }
+
+  &__subtitle {
+    grid-column: 1 / -1;
+
+    @include typography.promo-subtitle;
+
+    @include mixins.on-tablet {
+      grid-column: span 3;
+    }
+
+    @include mixins.on-desktop {
+      grid-column: span 6;
+    }
+  }
+}

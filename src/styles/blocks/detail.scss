@@ -1,0 +1,66 @@
+@use "../utils/variables" as *;
+@use "../utils/mixins";
+@use "../utils/typography";
+
+.detail {
+  &__photos {
+    @include mixins.page-grid;
+
+    margin-bottom: 16px;
+  }
+
+  &__link {
+    position: relative;
+
+    &--wide {
+      @include mixins.on-tablet {
+        grid-column: span 4;
+      }
+
+      @include mixins.on-desktop {
+        grid-column: span 8;
+      }
+    }
+
+    &--square {
+      height: 0;
+      padding-bottom: 100%;
+
+      @include mixins.on-tablet {
+        grid-column: span 2;
+      }
+
+      @include mixins.on-desktop {
+        grid-column: span 4;
+      }
+    }
+  }
+
+  &__photo {
+    @include mixins.absolute-cover;
+
+    object-fit: cover;
+
+    transition: transform $effect-time;
+
+    @include mixins.hover(transform, scale(1.05));
+
+    &:active {
+      @include mixins.hover(transform, scale(0.95));
+    }
+  }
+
+  &__title {
+    margin-bottom: 8px;
+
+    @include typography.detail-title;
+
+    @include mixins.on-tablet {
+      margin-bottom: 16px;
+    }
+  }
+
+  &__description {
+    @include typography.detail-description;
+  }
+}

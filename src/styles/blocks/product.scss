@@ -1,0 +1,35 @@
+@use "../utils/variables" as *;
+@use "../utils/mixins";
+@use "../utils/typography";
+
+.product {
+  &__photo {
+    width: 100%;
+
+    transition: transform $effect-time ease;
+
+    @include mixins.hover(transform, scale(1.05));
+
+    &:active {
+      @include mixins.hover(transform, scale(0.95));
+    }
+  }
+
+  &__title {
+    padding-top: 32px;
+
+    @include typography.product-info;
+  }
+
+  &__description {
+    padding-top: 8px;
+
+    @include typography.product-description;
+  }
+
+  &__price {
+    padding-top: 16px;
+
+    @include typography.product-info;
+  }
+}

@@ -1,0 +1,24 @@
+@use "../utils/variables" as *;
+@use "../utils/mixins";
+
+.footer {
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top right;
+  height: 200px;
+
+  @include mixins.bg-retina("footer/footer-ride-mobile");
+
+  @include mixins.on-tablet {
+    height: 480px;
+
+    @include mixins.bg-retina("footer/footer-ride-tablet");
+  }
+
+  @include mixins.on-desktop {
+    height: 555px;
+
+    @include mixins.bg-retina("footer/footer-ride-desktop");
+  }
+}

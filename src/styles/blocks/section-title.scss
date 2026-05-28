@@ -1,0 +1,15 @@
+@use "../utils/variables" as *;
+@use "../utils/mixins";
+@use "../utils/typography";
+
+.section-title {
+  margin-bottom: 48px;
+
+  text-align: center;
+
+  @include typography.section-title;
+
+  @include mixins.on-desktop {
+    margin-bottom: 56px;
+  }
+}
