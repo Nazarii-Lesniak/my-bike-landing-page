@@ -1,5 +1,6 @@
 @use "../utils/variables" as *;
 @use "../utils/mixins";
+@use "../utils/typography";
 
 .promo {
   @include mixins.page-grid;
@@ -21,6 +22,8 @@
   &__subtitle {
     grid-column: 1 / -1;
 
+    @include typography.promo-subtitle;
+
     @include mixins.on-tablet {
       grid-column: span 3;
     }
@@ -28,10 +31,5 @@
     @include mixins.on-desktop {
       grid-column: span 6;
     }
-
-    font-size: 23px;
-    font-weight: 500;
-    line-height: 140%;
-    color: $color-text-main;
   }
 }

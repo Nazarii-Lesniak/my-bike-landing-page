@@ -1,38 +1,22 @@
 @use "../utils/variables" as *;
 @use "../utils/mixins";
+@use "../utils/typography";
 
 .header {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center right;
 
-  background-image: url(../images/header/header-bike-mobile.png);
-  background-image: image-set(
-    url(../images/header/header-bike-mobile.webp) 1x,
-    url(../images/header/header-bike-mobile-@2x.webp) 2x,
-    url(../images/header/header-bike-mobile.png) 1x,
-    url(../images/header/header-bike-mobile-@2x.png) 2x
-  );
+  @include mixins.bg-retina("header/header-bike-mobile");
 
   @include mixins.on-tablet {
-    background-image: url(../images/header/header-bike-tablet.png);
-    background-image: image-set(
-      url(../images/header/header-bike-tablet.webp) 1x,
-      url(../images/header/header-bike-tablet-@2x.webp) 2x,
-      url(../images/header/header-bike-tablet.png) 1x,
-      url(../images/header/header-bike-tablet-@2x.png) 2x
-    );
+    @include mixins.bg-retina("header/header-bike-tablet");
   }
 
   @include mixins.on-desktop {
     background-position: top;
-    background-image: url(../images/header/header-bike-desktop.png);
-    background-image: image-set(
-      url(../images/header/header-bike-desktop.webp) 1x,
-      url(../images/header/header-bike-desktop-@2x.webp) 2x,
-      url(../images/header/header-bike-desktop.png) 1x,
-      url(../images/header/header-bike-desktop-@2x.png) 2x
-    );
+
+    @include mixins.bg-retina("header/header-bike-desktop");
   }
 
   &__content {
@@ -44,24 +28,9 @@
   }
 
   &__title {
-    margin: 0;
-    font-style: normal;
-    font-weight: 700;
-    font-size: 36px;
-    line-height: 100%;
-    letter-spacing: -1.5px;
-
     text-align: center;
 
-    color: $color-text-main;
-
-    @include mixins.on-tablet {
-      font-size: 64px;
-    }
-
-    @include mixins.on-desktop {
-      font-size: 80px;
-    }
+    @include typography.title;
   }
 
   &__bottom {

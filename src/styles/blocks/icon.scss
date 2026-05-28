@@ -1,5 +1,6 @@
-@use '../utils/variables' as *;
-@use '../utils/mixins';
+@use "../utils/variables" as *;
+@use "../utils/mixins";
+@use "../utils/typography";
 
 .icon {
   display: block;
@@ -22,9 +23,9 @@
     @include mixins.on-desktop {
       &:hover {
         .icon__phone-number {
-            display: block;
-            opacity: 1;
-            left: -150px;
+          display: block;
+          opacity: 1;
+          left: -150px;
         }
       }
     }
@@ -34,20 +35,15 @@
     display: inline-block;
     position: absolute;
     opacity: 0;
-    color: $color-text-main;
     white-space: nowrap;
-    text-decoration: none;
     z-index: 5;
-    padding: 8px;
-    font-size: 12px;
-    font-weight: 700;
-    line-height: 16px;
-    letter-spacing: 1px;
+
+    @include typography.phone-number;
+
     transition: transform $effect-time;
     top: 50%;
     left: -150px;
     transform: translateY(-50%);
-
   }
 
   &--menu {
@@ -60,5 +56,10 @@
 
   &--close {
     background-image: url(/src/images/icons/icon-close.svg);
+    transition: rotate $effect-time;
+
+    &:hover {
+      rotate: 180deg;
+    }
   }
 }

@@ -1,5 +1,6 @@
 @use "../utils/variables" as *;
 @use "../utils/mixins";
+@use "../utils/typography";
 
 .product {
   &__photo {
@@ -14,25 +15,19 @@
 
   &__title {
     padding-top: 32px;
-    font-size: 24px;
-    font-weight: 700;
-    line-height: 140%;
-    color: $color-text-main;
+
+    @include typography.product-info;
   }
 
   &__description {
     padding-top: 8px;
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 140%;
-    color: $color-text-main;
+
+    @include typography.product-description;
   }
 
   &__price {
     padding-top: 16px;
-    font-size: 24px;
-    font-weight: 700;
-    line-height: 140%;
-    color: $color-text-main;
+
+    @include typography.product-info;
   }
 }

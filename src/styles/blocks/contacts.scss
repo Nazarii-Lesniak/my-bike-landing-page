@@ -1,5 +1,6 @@
 @use "../utils/variables" as *;
 @use "../utils/mixins";
+@use "../utils/typography";
 
 .contacts {
   width: 100%;
@@ -59,11 +60,7 @@
   &__type-of-info {
     padding-bottom: 8px;
 
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 140%;
-
-    color: $color-text-main;
+    @include typography.contact-type-info;
   }
 
   &__text-info {
@@ -72,11 +69,7 @@
 
     padding-bottom: 24px;
 
-    font-size: 16px;
-    font-weight: 500;
-    line-height: 140%;
-
-    color: $color-text-main;
+    @include typography.contact-text-info;
 
     transition: color $effect-time;
 

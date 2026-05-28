@@ -1,5 +1,6 @@
-@use '../utils/variables' as *;
-@use '../utils/mixins';
+@use "../utils/variables" as *;
+@use "../utils/mixins";
+@use "../utils/typography";
 
 .nav {
   &__list {
@@ -12,17 +13,11 @@
 
   &__link {
     position: relative;
-    font-size: 22px;
-    font-weight: 600;
-    line-height: 22px;
-    letter-spacing: 2px;
 
-    @include mixins.on-desktop {
-        font-weight: 700;
-    }
+    @include typography.navigation-link;
 
     &::after {
-      content: '';
+      content: "";
       position: absolute;
       bottom: -8px;
       display: block;
@@ -41,6 +36,8 @@
   }
 
   &__item {
+    width: fit-content;
+
     @include mixins.hover(transform, scale(1.02));
   }
 }

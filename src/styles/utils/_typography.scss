@@ -1,0 +1,86 @@
+@use "./variables" as *;
+@use "./mixins";
+
+@mixin title {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 100%;
+  letter-spacing: -1.5px;
+  color: $color-text-main;
+
+  @include mixins.on-tablet {
+    font-size: 64px;
+  }
+
+  @include mixins.on-desktop {
+    font-size: 80px;
+  }
+}
+
+@mixin phone-number {
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 16px;
+  letter-spacing: 2px;
+  color: $color-text-main;
+}
+
+@mixin navigation-link {
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 22px;
+  letter-spacing: 2px;
+
+  @include mixins.on-desktop {
+    font-weight: 700;
+  }
+}
+
+@mixin product-info {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 140%;
+  color: $color-text-main;
+}
+
+@mixin product-description {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 140%;
+  color: $color-text-main;
+}
+
+@mixin promo-subtitle {
+  font-size: 23px;
+  font-weight: 500;
+  line-height: 140%;
+  color: $color-text-main;
+}
+
+@mixin contact-type-info {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 140%;
+  color: $color-text-main;
+}
+
+@mixin contact-text-info {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 140%;
+  color: $color-text-main;
+}
+
+@mixin detail-title {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 140%;
+  color: $color-text-main;
+}
+
+@mixin detail-description {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 140%;
+  color: $color-text-main;
+}

@@ -127,3 +127,13 @@
     @include hover(transform, scale(0.95));
   }
 }
+
+@mixin bg-retina($path) {
+  background-image: url(../images/#{$path}.png);
+  background-image: image-set(
+    url(../images/#{$path}.webp) 1x,
+    url(../images/#{$path}-@2x.webp) 2x,
+    url(../images/#{$path}.png) 1x,
+    url(../images/#{$path}-@2x.png) 2x
+  );
+}
